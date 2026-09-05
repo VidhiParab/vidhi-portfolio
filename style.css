@@ -1,0 +1,342 @@
+/* ===================== GLOBAL / COLOR PALETTE ===================== */
+
+:root {
+    --pink: #f4b6c2;         /* soft pink accent */
+    --pink-deep: #e88ca3;    /* deeper pink for hover/highlights */
+    --mint: #a8e6cf;         /* mint green accent */
+    --mint-deep: #6fc9a3;    /* deeper mint for hover/highlights */
+    --cream: #fff8f5;        /* light background */
+    --dark-bg: #1b2620;      /* deep mint-black for dark sections */
+    --dark-text: #2c2c2c;    /* body text on light backgrounds */
+    --light-text: #f4ede9;   /* body text on dark backgrounds */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cream);
+    color: var(--dark-text);
+    scroll-behavior: smooth;
+}
+
+h1, h2, .italic-accent, .italic-accent-light {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ===================== NAVBAR ===================== */
+
+.custom-navbar {
+    background-color: var(--cream);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 18px 0;
+}
+
+.custom-navbar .navbar-brand {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--dark-text);
+    font-size: 1.2rem;
+}
+
+.custom-navbar .nav-link {
+    color: var(--dark-text);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0 8px;
+}
+
+.custom-navbar .nav-link:hover {
+    color: var(--pink-deep);
+}
+
+/* ===================== HERO SECTION ===================== */
+
+.hero-section {
+    background-color: var(--cream);
+    padding: 40px 0 90px;
+    min-height: 90vh;
+}
+
+.hero-meta-row {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    color: #9a9a9a;
+    margin-top: 30px;
+}
+
+.hero-divider {
+    border-top: 1px solid #ddd;
+    margin: 15px 0 40px;
+}
+
+.hero-role {
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    color: var(--mint-deep);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 3.4rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--dark-text);
+    margin-bottom: 25px;
+}
+
+/* Italic accent used for emphasis words, mimics the "digital experiences" style */
+.italic-accent {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--pink-deep);
+}
+
+.italic-accent-light {
+    font-style: italic;
+    font-weight: 600;
+    color: var(--mint);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--pink);
+}
+
+/* "Explore my work" underline link, similar to reference style */
+.explore-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--dark-text);
+    text-decoration: none;
+    border-bottom: 2px solid var(--mint-deep);
+    padding-bottom: 6px;
+    transition: 0.3s ease;
+}
+
+.explore-link:hover {
+    color: var(--pink-deep);
+    border-color: var(--pink-deep);
+}
+
+/* ===================== DARK SECTIONS (About / Projects) ===================== */
+
+.dark-section {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 90px 0;
+}
+
+.section-number {
+    display: inline-block;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: var(--mint);
+    margin-bottom: 15px;
+}
+
+.dark-heading {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: var(--light-text);
+}
+
+.dark-text {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #d9d3ce;
+    text-align: center;
+}
+
+/* ===================== LIGHT SECTIONS (Skills / Contact) ===================== */
+
+.light-section {
+    background-color: var(--cream);
+    padding: 90px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.section-number-light {
+    display: inline-block;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: var(--pink-deep);
+    margin-bottom: 15px;
+}
+
+.light-heading {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--dark-text);
+}
+
+/* ===================== SKILLS (chip style) ===================== */
+
+.skill-chip {
+    border: 1.5px solid var(--mint-deep);
+    border-radius: 40px;
+    padding: 18px 10px;
+    text-align: center;
+    background-color: #fff;
+    transition: 0.3s ease;
+}
+
+.skill-chip span {
+    font-weight: 600;
+    color: var(--dark-text);
+    letter-spacing: 0.5px;
+}
+
+.skill-chip:hover {
+    background-color: var(--mint);
+    border-color: var(--mint);
+    transform: translateY(-4px);
+}
+
+/* ===================== PROJECT CARD ===================== */
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(244, 182, 194, 0.4);
+    border-radius: 14px;
+    padding: 35px;
+}
+
+.project-tag {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    color: var(--pink);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.project-card h5 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: var(--light-text);
+    margin-bottom: 15px;
+}
+
+.project-desc {
+    color: #cfc9c5;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.project-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* ===================== CONTACT SECTION ===================== */
+
+.contact-info-row {
+    margin-top: 10px;
+}
+
+.contact-label {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    color: var(--mint-deep);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.contact-value {
+    font-size: 1rem;
+    color: var(--dark-text);
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--dark-text);
+}
+
+.form-control {
+    border: 1.5px solid #e0d5d0;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    border-color: var(--pink-deep);
+    box-shadow: 0 0 0 0.2rem rgba(232, 140, 163, 0.2);
+}
+
+/* Custom button — pink fill, mint on hover for a playful two-tone feel */
+.btn-custom {
+    background-color: var(--pink-deep);
+    color: #fff;
+    border: none;
+    padding: 11px 32px;
+    border-radius: 30px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: var(--mint-deep);
+    color: #fff;
+}
+
+/* ===================== FOOTER ===================== */
+
+footer {
+    background-color: var(--dark-bg);
+    color: #cfc9c5;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+.hero-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #6b7d3b;
+}
+
+.highlight {
+  color: #c48a8a;
+}
+/* ===================== RESPONSIVE ADJUSTMENTS ===================== */
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .dark-heading, .light-heading {
+        font-size: 2rem;
+    }
+
+    .dark-section, .light-section {
+        padding: 60px 0;
+    }
+
+    .hero-section {
+        padding: 20px 0 60px;
+    }
+}
